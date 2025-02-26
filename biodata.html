@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pengisian</title>
+    <style>
+        td, th {
+            padding: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: px;
+        }
+        .submit-button {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action=" " method="post">
+        <table>
+            <tr>
+                <th colspan="2">Form Pengisian</th>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="username" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin:</td>
+                <td>
+                    <input type="radio" name="gender" required> Laki-laki
+                    <input type="radio" name="gender" required> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>Tangal Lahir:</td>
+                <td>
+                    <input type="date" name="number" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Mood Kamu Hari Ini:</td>
+                <td>
+                    <input type="range" name="range" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Pilih Warna Favorit:</td>
+                <td>
+                    <input type="color" name="color" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat:</td>
+                <td><textarea name="alamat" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Nomor Whatsapp:</td>
+                <td>
+                    <input type="tel" name="telepon" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Jurusan:</td>
+                <td>
+                    <select name="jurusan" required>
+                        <option >RPL</option>
+                        <option >PGPAUD</option>
+                        <option >PGSD</option>
+                        <option >TEKKOM</option>
+                        <option >Multimedia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Link Website Jurusan yang Dipilih:</td>
+                <td>
+                    <input type="url" name="url" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Upload File E-KTM:</td>
+                <td><input type="file" name="file" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="submit-button">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
