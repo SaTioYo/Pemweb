@@ -1,32 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Registrasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d2a613e2;
+        }
+
+        .kotak_register {
+            background: rgba(255, 187, 0, 0.963);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
+
+<div class="kotak_register">
     <h2>Halaman Registrasi</h2>
     <form action="register" method="post">
         <table>
             <tr>
-                <td><label>Nama Lengkap:</label></td>
-                <td><input type="text" name="name" required></td>
+                <td><label for="name">Nama Lengkap:</label></td>
+                <td><input type="text" id="name" name="name" required></td>
             </tr>
             <tr>
-                <td><label>Email:</label></td>
-                <td><input type="email" name="email" required></td>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
             </tr>
             <tr>
-                <td><label>Kata Sandi:</label></td>
-                <td><input type="password" name="password" required></td>
+                <td><label for="password">Kata Sandi:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
             </tr>
             <tr>
-                <td><label>Unggah Foto:</label></td>
-                <td><input type="file" name="photo" required></td>
+                <td><label for="photo">Unggah Foto:</label></td>
+                <td><input type="file" id="photo" name="photo" required></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><input type="submit" value="Daftar"></td>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Daftar">
+                </td>
             </tr>
         </table>
     </form>
+</div>
+
 </body>
 </html>
