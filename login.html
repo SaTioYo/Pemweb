@@ -1,18 +1,83 @@
-<h2>Halaman Login</h2>
-<form action="login" method="post">
-    <table>
-        <tr>
-            <td><label>Email:</label></td>
-            <td><input type="email" name="login_email" required></td>
-        </tr>
-        <tr>
-            <td><label>Kata Sandi:</label></td>
-            <td><input type="password" name="login_password" required></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center"><input type="submit" value="Masuk"></td>
-        </tr>
-    </table>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #3f0d0d;
+        }
+
+        .kotak_login {
+            background: rgb(190, 63, 63);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="kotak_login">
+    <h2>Halaman Login</h2>
+    <form action="login" method="post">
+        <table>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="login_email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Kata Sandi:</label></td>
+                <td><input type="password" id="password" name="login_password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Masuk">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
 </body>
 </html>
