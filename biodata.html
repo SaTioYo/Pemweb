@@ -1,28 +1,75 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pengisian</title>
     <style>
-        td, th {
-            padding: 10px;
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
-        input, select {
-            width: 100%;
-            padding: px;
+
+        .kotak_biodata {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
         }
-        .submit-button {
+
+        h2 {
             text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
+
+<div class="kotak_biodata">
+    <h2>Form Pengisian</h2>
     <form action=" " method="post">
         <table>
-            <tr>
-                <th colspan="2">Form Pengisian</th>
-            </tr>
             <tr>
                 <td>Username:</td>
                 <td><input type="text" name="username" required></td>
@@ -34,27 +81,21 @@
             <tr>
                 <td>Jenis Kelamin:</td>
                 <td>
-                    <input type="radio" name="gender" required> Laki-laki
-                    <input type="radio" name="gender" required> Perempuan
+                    <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+                    <input type="radio" name="gender" value="Perempuan" required> Perempuan
                 </td>
             </tr>
             <tr>
-                <td>Tangal Lahir:</td>
-                <td>
-                    <input type="date" name="number" required>
-                </td>
+                <td>Tanggal Lahir:</td>
+                <td><input type="date" name="birthdate" required></td>
             </tr>
             <tr>
                 <td>Mood Kamu Hari Ini:</td>
-                <td>
-                    <input type="range" name="range" required>
-                </td>
+                <td><input type="range" name="mood" required></td>
             </tr>
             <tr>
                 <td>Pilih Warna Favorit:</td>
-                <td>
-                    <input type="color" name="color" required>
-                </td>
+                <td><input type="color" name="color" required></td>
             </tr>
             <tr>
                 <td>Alamat:</td>
@@ -62,38 +103,37 @@
             </tr>
             <tr>
                 <td>Nomor Whatsapp:</td>
-                <td>
-                    <input type="tel" name="telepon" required>
-                </td>
+                <td><input type="tel" name="telepon" required></td>
             </tr>
             <tr>
                 <td>Jurusan:</td>
                 <td>
                     <select name="jurusan" required>
-                        <option >RPL</option>
-                        <option >PGPAUD</option>
-                        <option >PGSD</option>
-                        <option >TEKKOM</option>
-                        <option >Multimedia</option>
+                        <option value="">-- Pilih Jurusan --</option>
+                        <option>RPL</option>
+                        <option>PGPAUD</option>
+                        <option>PGSD</option>
+                        <option>TEKKOM</option>
+                        <option>Multimedia</option>
                     </select>
                 </td>
             </tr>
             <tr>
-                <td>Link Website Jurusan yang Dipilih:</td>
-                <td>
-                    <input type="url" name="url" required>
-                </td>
+                <td>Link Website Jurusan:</td>
+                <td><input type="url" name="url" required></td>
             </tr>
             <tr>
                 <td>Upload File E-KTM:</td>
                 <td><input type="file" name="file" required></td>
             </tr>
             <tr>
-                <td colspan="2" class="submit-button">
+                <td colspan="2">
                     <button type="submit">Submit</button>
                 </td>
             </tr>
         </table>
     </form>
+</div>
+
 </body>
 </html>
